@@ -12,8 +12,7 @@ body {
 
 #app {
     margin: 2% 10%;
-    border: 1px solid white;
-    background-color: bisque;
+    background-color: white;
     height: 900px;
     display: flex;
 }
@@ -22,9 +21,9 @@ body {
 
 #container-left {
     width: 35%;
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid gainsboro;
 }
 
 /* header sinistro */
@@ -92,6 +91,8 @@ body {
 #search-chat {
     height: 55px;
     background-color: #fafafa;
+    display: flex;
+    padding: 10px;
 }
 
 .contact {
@@ -108,7 +109,6 @@ body {
 
 #container-right {
     width: 65%;
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,19 +116,36 @@ body {
 
 #header-right {
     height: 75px;
-    border: 1px solid white;
+    background-color: #eaeaea;
 }
 
+/* chat aperta */
 #chat-box {
-    border: 1px solid white;
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    padding: 50px 105px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 300px;
+    min-width: 300px;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
 }
 
 #chat-bar {
     height: 75px;
-    border: 1px solid white;
 }
-
-
-

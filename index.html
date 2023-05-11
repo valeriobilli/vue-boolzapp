@@ -12,6 +12,8 @@
     <div id="app">
         <!-- lista contatti -->
        <div id="container-left">
+
+            <!-- user -->
             <div id="header-left">
                 <div id="user">
                     <img v-for="user in user" :src="user.avatar" :alt="user.name" class="profile-pic">
@@ -23,7 +25,8 @@
                     <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                 </div>
             </div>
-
+            
+            <!-- banner notifiche -->
             <div id="notifications">
                 <div id="bell">
                     <i class="fa-solid fa-bell-slash"></i>
@@ -35,15 +38,18 @@
                 
             </div>
 
+            <!-- barra di ricerca -->
             <div id="search-chat">
-                cerca chat
+                <div></div>
+                <div></div>
             </div>
 
+            <!-- lista delle chat -->
             <div>
 
                 <div v-for="contact in contacts" class="contact">
                     <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
-                    {{ contact.name }}
+                    <div>{{ contact.name }}</div>
                 </div>
                 
             </div>
@@ -61,7 +67,9 @@
             </div>
 
             <div id="chat-box">
-                chat
+                <div class="message sent">Hai portato a spasso il cane?</div>
+                <div class="message sent">Ricordati di stendere i panni</div>
+                <div class="message received">Tutto fatto!</div>
             </div>
 
             <div id="chat-bar">
