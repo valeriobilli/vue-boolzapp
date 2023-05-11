@@ -5,7 +5,9 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            chiave: "PROVA",
+            user: [
+                {name: "Sofia", avatar: "./img/avatar_io.jpg"}
+            ],
         }
     },
     methods: {

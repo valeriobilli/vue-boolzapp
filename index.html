@@ -13,7 +13,15 @@
         <!-- lista contatti -->
        <div id="container-left">
             <div id="header-left">
-                utente
+                <div id="user">
+                    <img v-for="user in user" :src="user.avatar" :alt="user.name" class="profile-pic">
+                    <div>Sofia</div>
+                </div>
+                <div id="icons">
+                    <span class="icon"><i class="fa-solid fa-circle-notch"></i></span>
+                    <span class="icon"><i class="fa-solid fa-message"></i></span>
+                    <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
             </div>
 
             <div id="notifications">
