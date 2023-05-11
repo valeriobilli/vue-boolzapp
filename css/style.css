@@ -17,16 +17,13 @@ body {
     display: flex;
 }
 
+/* container sinistra */
+
 #container-left {
     width: 35%;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
-}
-
-#container-right {
-    width: 65%;
-    border: 1px solid white;
 }
 
 #header-left {
@@ -48,3 +45,30 @@ body {
     height: 85px;
     border: 1px solid white;
 }
+
+/* container destra */
+
+#container-right {
+    width: 65%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header-right {
+    height: 75px;
+    border: 1px solid white;
+}
+
+#chat-box {
+    border: 1px solid white;
+    flex-grow: 1;
+}
+
+#chat-bar {
+    height: 75px;
+    border: 1px solid white;
+}
+
+
