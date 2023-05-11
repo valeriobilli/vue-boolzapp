@@ -5,7 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            chiave: "ciao",
+            chiave: "PROVA",
         }
     },
     methods: {
