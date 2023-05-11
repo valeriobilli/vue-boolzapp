@@ -20,9 +20,31 @@ body {
 #container-left {
     width: 35%;
     border: 1px solid white;
+    display: flex;
+    flex-direction: column;
 }
 
 #container-right {
     width: 65%;
+    border: 1px solid white;
+}
+
+#header-left {
+    height: 75px;
+    border: 1px solid white;
+}
+
+#notifications {
+    height: 85px;
+    border: 1px solid white;
+}
+
+#search-chat {
+    height: 55px;
+    border: 1px solid white;
+}
+
+.contact {
+    height: 85px;
     border: 1px solid white;
 }
