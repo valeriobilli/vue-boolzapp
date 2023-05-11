@@ -40,7 +40,9 @@
             </div>
 
             <div>
+
                 <div v-for="contact in contacts" class="contact">
+                    <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
                     {{ contact.name }}
                 </div>
                 
