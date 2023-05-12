@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- lista contatti -->
+       <div id="container-left">
+
+            <!-- user -->
+            <div id="header-left">
+                <div id="user">
+                    <img v-for="user in user" :src="user.avatar" :alt="user.name" class="profile-pic">
+                    <div>Sofia</div>
+                </div>
+                <div id="icons">
+                    <a class="icon"><i class="fa-solid fa-circle-notch"></i></a>
+                    <a class="icon"><i class="fa-solid fa-message"></i></a>
+                    <a class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+            
+            <!-- banner notifiche -->
+            <div id="notifications">
+                <div id="bell">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div>
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="">Attiva notifiche desktop</a>
+                </div>
+                
+            </div>
+
+            <!-- barra di ricerca chat -->
+            <div id="search-chat">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div><input type="text"></div>
+            </div>
+
+            <!-- lista delle chat -->
+            <div id="contact-list">
+                <div v-for="contact in contacts" class="contact">
+                    <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
+                    <div>{{ contact.name }}</div>
+                </div>
+                <!-- doppia lista per debug hoverflow -->
+                <div v-for="contact in contacts" class="contact">
+                    <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
+                    <div>{{ contact.name }}</div>
+                </div>
+            </div>
+       </div>
+
+       <!-- schermata chat -->
+       <div id="container-right">
+
+            <div id="header-right">
+                <div id="user">
+                    <img src="./img/avatar_1.jpg" alt="Michele" class="profile-pic">
+                    <div>Michele</div>
+                </div>
+                <div id="icons">
+                    <a class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="icon"><i class="fa-solid fa-paperclip"></i></a>
+                    <a class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+
+            <div id="chat-box">
+                <div class="message sent">Hai portato a spasso il cane?</div>
+                <div class="message sent">Ricordati di stendere i panni</div>
+                <div class="message received">Tutto fatto!</div>
+            </div>
+
+            <div id="chat-bar">
+                <div><i class="fa-regular fa-face-smile"></i></div>
+                <div id="chat-input">
+                    <input type="text" placeholder="Scrivi un messaggio">
+                </div>
+                <div><i class="fa-solid fa-microphone"></i></div>
+            </div>
+            
+       </div>
+    </div>
+    
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script> 
+</body>
+</html>
