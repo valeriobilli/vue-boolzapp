@@ -75,10 +75,10 @@
 
             <!-- chat messaggi -->
             <div id="chat-box">
-                <!-- <div class="message sent">Hai portato a spasso il cane?</div>
-                <div class="message sent">Ricordati di stendere i panni</div>
-                <div class="message received">Tutto fatto!</div> -->
-                <div class="message" v-for="message in contacts[0].messages" :class="(message.sent == true) ? 'sent' : 'received'">{{message.message}}</div>
+                <div class="message" v-for="message in contacts[0].messages" :class="(message.sent == true) ? 'sent' : 'received'">
+                    {{message.message}}
+                    <span class="hour">{{message.date}}</span>
+                </div>
             </div>
             
             <!-- barra per scrivere messaggi -->

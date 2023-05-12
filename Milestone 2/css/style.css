@@ -171,6 +171,7 @@ body {
     padding: 20px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
 .sent {
@@ -181,6 +182,14 @@ body {
 .received {
     background-color: white;
     align-self: flex-start;
+}
+
+.hour {
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 #chat-bar {
