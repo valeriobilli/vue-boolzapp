@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            selected: 0,
             user: [
                 {name: "Sofia", avatar: "./img/avatar_io.jpg"}
             ],
@@ -195,6 +196,8 @@ createApp({
         }
     },
     methods: {
-
+        selectContact(i) {
+            this.selected = i;
+        }
     },
 }).mount('#app')

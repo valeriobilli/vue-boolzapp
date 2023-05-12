@@ -46,12 +46,7 @@
 
             <!-- lista delle chat -->
             <div id="contact-list">
-                <div v-for="contact in contacts" class="contact">
-                    <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
-                    <div>{{ contact.name }}</div>
-                </div>
-                <!-- doppia lista per debug hoverflow -->
-                <div v-for="contact in contacts" class="contact">
+                <div v-for="(contact, i) in contacts" class="contact" @click="selectContact(i)">
                     <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
                     <div>{{ contact.name }}</div>
                 </div>
@@ -75,7 +70,7 @@
 
             <!-- chat messaggi -->
             <div id="chat-box">
-                <div class="message" v-for="message in contacts[0].messages" :class="(message.sent == true) ? 'sent' : 'received'">
+                <div class="message" v-for="message in contacts[selected].messages" :class="(message.sent == true) ? 'sent' : 'received'">
                     {{message.message}}
                     <span class="hour">{{message.date}}</span>
                 </div>
