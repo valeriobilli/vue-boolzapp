@@ -20,9 +20,9 @@
                     <div>Sofia</div>
                 </div>
                 <div id="icons">
-                    <span class="icon"><i class="fa-solid fa-circle-notch"></i></span>
-                    <span class="icon"><i class="fa-solid fa-message"></i></span>
-                    <span class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    <a class="icon"><i class="fa-solid fa-circle-notch"></i></a>
+                    <a class="icon"><i class="fa-solid fa-message"></i></a>
+                    <a class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                 </div>
             </div>
             
@@ -38,32 +38,39 @@
                 
             </div>
 
-            <!-- barra di ricerca -->
+            <!-- barra di ricerca chat -->
             <div id="search-chat">
-                <div></div>
-                <div></div>
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div><input type="text"></div>
             </div>
 
             <!-- lista delle chat -->
-            <div>
-
+            <div id="contact-list">
                 <div v-for="contact in contacts" class="contact">
                     <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
                     <div>{{ contact.name }}</div>
                 </div>
-                
+                <!-- doppia lista per debug hoverflow -->
+                <div v-for="contact in contacts" class="contact">
+                    <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
+                    <div>{{ contact.name }}</div>
+                </div>
             </div>
-           
-           
-            
-
        </div>
 
        <!-- schermata chat -->
        <div id="container-right">
 
             <div id="header-right">
-                contatto aperto
+                <div id="user">
+                    <img src="./img/avatar_1.jpg" alt="Michele" class="profile-pic">
+                    <div>Michele</div>
+                </div>
+                <div id="icons">
+                    <a class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="icon"><i class="fa-solid fa-paperclip"></i></a>
+                    <a class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
             </div>
 
             <div id="chat-box">
@@ -73,7 +80,11 @@
             </div>
 
             <div id="chat-bar">
-                scrivi un messaggio
+                <div><i class="fa-regular fa-face-smile"></i></div>
+                <div id="chat-input">
+                    <input type="text" placeholder="Scrivi un messaggio">
+                </div>
+                <div><i class="fa-solid fa-microphone"></i></div>
             </div>
             
        </div>

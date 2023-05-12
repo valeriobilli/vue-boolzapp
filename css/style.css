@@ -5,15 +5,24 @@
 }
 
 body {
-    background-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background: rgb(0,150,136);
+    background: -moz-linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    background: -webkit-linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009688",endColorstr="#dadbd4",GradientType=1);
+
+
 }
 
 #app {
-    margin: 2% 10%;
+    margin: 1% 10%;
     background-color: white;
-    height: 900px;
+    height: 98vh;
     display: flex;
 }
 
@@ -23,7 +32,6 @@ body {
     width: 35%;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid gainsboro;
 }
 
 /* header sinistro */
@@ -35,6 +43,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    border-right: 1px solid gainsboro ;
 }
 
 .profile-pic {
@@ -48,16 +57,13 @@ body {
     color: #b1b1b1;
     margin-right: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #user {
     display: flex;
     align-items: center;
 }
-
-
-
-
 
 /* notifiche */
 
@@ -95,18 +101,40 @@ body {
     padding: 10px;
 }
 
-.contact {
-    height: 85px;
-    background-color: white;
-    border: 1px solid gainsboro;
-    padding: 10px;
-    display: flex;
+#search-chat div {
+    height: 100%;
+}
+
+#search-chat input {
+    height: 100%;
+    width: 100%;
+}
+
+#search-chat:first-child {
+    width: 10%;
+}
+
+#search-chat:last-child {
+    width: 90%;
 }
 
 
 
-/* container destra */
+/* lista contatti */
 
+#contact-list {
+    overflow-y: auto;
+}
+
+.contact {
+    height: 85px;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    padding: 10px;
+    display: flex;
+}
+
+/* container destra */
 #container-right {
     width: 65%;
     display: flex;
@@ -117,6 +145,10 @@ body {
 #header-right {
     height: 75px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 /* chat aperta */
@@ -148,4 +180,26 @@ body {
 
 #chat-bar {
     height: 75px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-bar i {
+    margin: 0 40px;
+    font-size: 24px;
+    color: #6b7376;
+}
+
+#chat-input {
+    flex-grow: 1;
+}
+
+#chat-bar input { 
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 4px; 
+    border: none;
 }
