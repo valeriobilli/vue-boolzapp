@@ -198,6 +198,13 @@ createApp({
     methods: {
         selectContact(i) {
             this.selected = i;
+        },
+        getContactClass(i) {
+            let classe = "";
+            if (this.selected == i) {
+                classe = "selected-contact"
+            }
+            return classe;
         }
     },
 }).mount('#app')

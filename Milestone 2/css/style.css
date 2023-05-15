@@ -136,6 +136,10 @@ body {
     display: flex;
 }
 
+.contact:hover {
+    background-color: #eee;
+}
+
 .selected-contact {
     background-color: #e9ebeb;
 }

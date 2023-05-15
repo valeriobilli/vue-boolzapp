@@ -46,7 +46,7 @@
 
             <!-- lista delle chat -->
             <div id="contact-list">
-                <div v-for="(contact, i) in contacts" class="contact" @click="selectContact(i)">
+                <div v-for="(contact, i) in contacts" class="contact" :class="getContactClass(i)" @click="selectContact(i)">
                     <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
                     <div>{{ contact.name }}</div>
                 </div>
