@@ -124,7 +124,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Claudio',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
                     messages: [
@@ -205,6 +205,6 @@ createApp({
                 classe = "selected-contact"
             }
             return classe;
-        }
+        },
     },
 }).mount('#app')

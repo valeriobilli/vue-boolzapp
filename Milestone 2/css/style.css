@@ -98,21 +98,23 @@ body {
     height: 55px;
     background-color: #fafafa;
     display: flex;
+    align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 #search-chat div {
     height: 100%;
+    width: 100%;
 }
 
 #search-chat input {
-    width: 100%;
     padding: 8px 12px;
-    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 #search-chat:first-child {
@@ -121,6 +123,12 @@ body {
 
 #search-chat:last-child {
     width: 90%;
+}
+
+#search-chat i {
+    margin-right: 1rem;
+    font-size: 18px;
+    color: #b7b9ba;
 }
 
 /* lista contatti */
