@@ -15,7 +15,7 @@
 
             <!-- user -->
             <div id="header-left">
-                <div id="user">
+                <div class="user">
                     <img v-for="user in user" :src="user.avatar" :alt="user.name" class="profile-pic">
                     <div>Sofia</div>
                 </div>
@@ -57,9 +57,9 @@
        <div id="container-right">
 
             <div id="header-right">
-                <div id="user">
-                    <img src="./img/avatar_1.jpg" alt="Michele" class="profile-pic">
-                    <div>Michele</div>
+                <div class="user">
+                    <img :src="contacts[selected].avatar" alt="contacts[selected].name" class="profile-pic">
+                    <div>{{contacts[selected].name}}</div>
                 </div>
                 <div id="icons">
                     <a class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
