@@ -213,8 +213,17 @@ createApp({
                     message: (this.myMessage),
                     sent: true,
                 })
-                this.myMessage.text = '';
+                this.myMessage = '';
+                this.reply()
             }
-        }
+        },
+        reply() {
+            setTimeout (()=> {
+                this.contacts[this.selected].messages.push ({
+                    message: 'Ok👍🏻',
+                    sent: false,
+                })
+            }, 3000);
+        },
     },
 }).mount('#app')
