@@ -9,10 +9,10 @@ createApp({
             user: [
                 {name: "Sofia", avatar: "./img/avatar_io.jpg"}
             ],
-            newMessage: [
+            newMessages: [
                 {
                     text: '',
-                    sent: true,
+                    sent: true
                 }
             ],
             contacts: [
@@ -213,6 +213,7 @@ createApp({
             return classe;
         },
         addMessage() { 
+            this.newMessages.push(this.newMessage);
         }
     },
 }).mount('#app')
