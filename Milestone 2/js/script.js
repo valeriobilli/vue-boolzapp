@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            myMessage: '',
             selected: 0,
             user: [
                 {name: "Sofia", avatar: "./img/avatar_io.jpg"}
@@ -206,9 +207,14 @@ createApp({
             }
             return classe;
         },
-        // addMessage() {
-        //     let newMessage;
-        //     newMessage = 
-        // }
+        addMessage() {
+            if (this.myMessage != '') {
+                this.contacts[this.selected].messages.push ({
+                    message: (this.myMessage),
+                    sent: true,
+                })
+                this.myMessage.text = '';
+            }
+        }
     },
 }).mount('#app')
