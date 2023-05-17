@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            searchText: '',
             myMessage: '',
             selected: 0,
             user: [
@@ -221,12 +222,19 @@ createApp({
             let dataAttuale = new Date();
             setTimeout (()=> {
                 this.contacts[this.selected].messages.push ({
-                    message: 'Ok👍🏻',
+                    message: 'Chiara ma vaffanculo',
                     sent: false,
                     date: dataAttuale.toLocaleDateString() + " " + dataAttuale.toLocaleTimeString(),
                 })
             }, 2000)
         },
+        searchContact() {
+            const toSearch = this.searchText.toLowerCase();
+            this.contacts.forEach((contact) => {
+                const contactName = contact.name.toLowerCase();
+                contact.visible = contactName.includes(toSearch);
+            });
+        }
         
     },
 }).mount('#app')

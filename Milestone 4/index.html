@@ -39,12 +39,12 @@
             <!-- barra di ricerca chat -->
             <div id="search-chat">
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                <div><input type="text" v-model="searchContact" @keyup="searchContact"></div>
+                <div><input type="text" v-model="searchText" @keyup="searchContact"></div>
             </div>
 
             <!-- lista delle chat -->
             <div id="contact-list">
-                <div v-for="(contact, i) in contacts" class="contact" :class="getContactClass(i)" @click="selectContact(i)">
+                <div v-for="(contact, i) in contacts" v-show="contact.visible" class="contact" :class="getContactClass(i)" @click="selectContact(i)">
                     <img :src="contact.avatar" :alt="contact.name" class="profile-pic"/>
                     <div>{{ contact.name }}</div>
                 </div>
