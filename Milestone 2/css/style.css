@@ -15,16 +15,19 @@ body {
     background: -webkit-linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
     background: linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009688",endColorstr="#dadbd4",GradientType=1);
+
+
 }
 
 #app {
-    margin: 0 10%;
+    margin: 1% 10%;
     background-color: white;
-    height: 95vh;
+    height: 98vh;
     display: flex;
 }
 
 /* container sinistra */
+
 #container-left {
     width: 35%;
     display: flex;
@@ -32,6 +35,7 @@ body {
 }
 
 /* header sinistro */
+
 #header-left {
     height: 75px;
     background-color: #eaeaea;
@@ -62,6 +66,7 @@ body {
 }
 
 /* notifiche */
+
 #notifications {
     height: 85px;
     background-color: #8edafc;
@@ -88,6 +93,7 @@ body {
 }
 
 /* search bar */
+
 #search-chat {
     height: 55px;
     background-color: #fafafa;
@@ -163,6 +169,8 @@ body {
     padding: 10px;
 }
 
+
+
 /* chat aperta */
 #chat-box {
     flex-grow: 1;
@@ -170,7 +178,6 @@ body {
     padding: 50px 105px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
 }
 
 .message {

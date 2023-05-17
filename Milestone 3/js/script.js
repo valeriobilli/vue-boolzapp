@@ -1,10 +1,9 @@
-console.log("ciao")
-
 const { createApp } = Vue 
 
 createApp({
     data() {
         return {
+            myMessage: '',
             selected: 0,
             user: [
                 {name: "Sofia", avatar: "./img/avatar_io.jpg"}
@@ -32,7 +31,7 @@ createApp({
                             message: 'Tutto fatto!',
                             sent : false,
                             received: true,
-                        }
+                        },
                     ],
                 },
                 {
@@ -205,6 +204,28 @@ createApp({
                 classe = "selected-contact"
             }
             return classe;
+        },
+        addMessage() {
+            let dataAttuale = new Date();
+            if (this.myMessage != '') {
+                this.contacts[this.selected].messages.push ({
+                    message: (this.myMessage),
+                    sent: true,
+                    date: dataAttuale.toLocaleDateString() + " " + dataAttuale.toLocaleTimeString(),
+                })
+                this.myMessage = '';
+                this.reply();
+            }
+        },
+        reply() {
+            let dataAttuale = new Date();
+            setTimeout (()=> {
+                this.contacts[this.selected].messages.push ({
+                    message: 'Ok👍🏻',
+                    sent: false,
+                    date: dataAttuale.toLocaleDateString() + " " + dataAttuale.toLocaleTimeString(),
+                })
+            }, 2000)
         },
     },
 }).mount('#app')

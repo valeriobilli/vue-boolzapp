@@ -12,6 +12,7 @@
     <div id="app">
         <!-- lista contatti -->
        <div id="container-left">
+
             <!-- user -->
             <div id="header-left">
                 <div class="user">
@@ -34,6 +35,7 @@
                     <p>Ricevi notifiche di nuovi messaggi</p>
                     <a href="">Attiva notifiche desktop</a>
                 </div>
+                
             </div>
 
             <!-- barra di ricerca chat -->
@@ -53,6 +55,7 @@
 
        <!-- schermata chat -->
        <div id="container-right">
+
             <div id="header-right">
                 <div class="user">
                     <img :src="contacts[selected].avatar" alt="contacts[selected].name" class="profile-pic">
@@ -77,13 +80,14 @@
             <div id="chat-bar">
                 <div><i class="fa-regular fa-face-smile"></i></div>
                 <div id="chat-input">
-                    <input type="text" placeholder="Scrivi un messaggio" v-model="myMessage" @keyup.enter="addMessage">
+                    <input type="text" placeholder="Scrivi un messaggio">
                 </div>
                 <div><i class="fa-solid fa-microphone"></i></div>
             </div>
+            
        </div>
     </div>
-
+    
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script> 
 </body>
