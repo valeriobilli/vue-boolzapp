@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background: rgb(0,150,136);
+    background: -moz-linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    background: -webkit-linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 12%, rgba(218,219,212,1) 12%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009688",endColorstr="#dadbd4",GradientType=1);
+}
+
+#app {
+    margin: 0 10%;
+    background-color: white;
+    height: 95vh;
+    display: flex;
+}
+
+/* container sinistra */
+#container-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header sinistro */
+#header-left {
+    height: 75px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid gainsboro ;
+}
+
+.profile-pic {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.icon {
+    color: #b1b1b1;
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+/* notifiche */
+#notifications {
+    height: 85px;
+    background-color: #8edafc;
+    padding: 15px;
+    display: flex;
+}
+
+#bell {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#notifications a {
+    color: grey;
+    font-size: 12px;
+}
+
+/* search bar */
+#search-chat {
+    height: 55px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+#search-chat div {
+    height: 100%;
+    width: 100%;
+}
+
+#search-chat input {
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#search-chat:first-child {
+    width: 10%;
+}
+
+#search-chat:last-child {
+    width: 90%;
+}
+
+#search-chat i {
+    margin-right: 1rem;
+    font-size: 18px;
+    color: #b7b9ba;
+}
+
+/* lista contatti */
+#contact-list {
+    overflow-y: auto;
+}
+
+.contact {
+    height: 85px;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    padding: 10px;
+    display: flex;
+}
+
+.contact:hover {
+    background-color: #eee;
+}
+
+.selected-contact {
+    background-color: #e9ebeb;
+}
+
+/* container destra */
+#container-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header-right {
+    height: 75px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* chat aperta */
+#chat-box {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+    padding: 50px 105px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.message {
+    max-width: 300px;
+    min-width: 300px;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.hour {
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#chat-bar {
+    height: 75px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-bar i {
+    margin: 0 40px;
+    font-size: 24px;
+    color: #6b7376;
+}
+
+#chat-input {
+    flex-grow: 1;
+}
+
+#chat-bar input { 
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 4px; 
+    border: none;
+}
