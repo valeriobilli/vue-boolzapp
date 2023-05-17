@@ -1,5 +1,3 @@
-console.log("ciao")
-
 const { createApp } = Vue 
 
 createApp({
@@ -33,7 +31,7 @@ createApp({
                             message: 'Tutto fatto!',
                             sent : false,
                             received: true,
-                        }
+                        },
                     ],
                 },
                 {
@@ -208,13 +206,15 @@ createApp({
             return classe;
         },
         addMessage() {
+            let dataAttuale = new Date();
             if (this.myMessage != '') {
                 this.contacts[this.selected].messages.push ({
                     message: (this.myMessage),
                     sent: true,
+                    date: dataAttuale.toLocaleDateString() + " " + dataAttuale.toLocaleTimeString(),
                 })
                 this.myMessage = '';
-                this.reply()
+                this.reply;
             }
         },
         reply() {
@@ -223,7 +223,7 @@ createApp({
                     message: 'Ok👍🏻',
                     sent: false,
                 })
-            }, 3000);
+            }, 2000)
         },
     },
 }).mount('#app')
